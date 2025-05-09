@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viewer - MyCola</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+</head>
+<body>
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <a href="index.html" class="brand"><i class="fas fa-cube"></i> MyCola</a>
+            <div class="nav-items">
+                <a href="index.html" class="active"><i class="fas fa-cube"></i> Viewer</a>
+                <a href="references.html"><i class="fas fa-fan"></i> References</a>
+                <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="model-container">
+        <button class="nav-btn left-btn"><i class="fas fa-chevron-left"></i></button>
+        <button class="nav-btn right-btn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <div class="control-panel">
+        <button class="control-btn" onclick="toggleRotation()">
+            <i class="fas fa-sync"></i>
+            <span>Rotation</span>
+        </button>
+        <button class="control-btn" onclick="toggleWireframe()">
+            <i class="fas fa-image"></i>
+            <span>Wireframe</span>
+        </button>
+        <button class="control-btn" onclick="toggleLight()">
+            <i class="fas fa-lightbulb"></i>
+            <span>Lighting</span>
+        </button>
+        <button class="control-btn" onclick="toggleModel(0)">
+            <i class="fas fa-dice-d6"></i>
+            <span>cola1</span>
+        </button>
+        <button class="control-btn" onclick="toggleModel(1)">
+            <i class="fas fa-dice-d6"></i>
+            <span>cola2</span>
+        </button>
+        <button class="control-btn" onclick="toggleModel(2)">
+            <i class="fas fa-dice-d6"></i>
+            <span>cola3</span>
+        </button>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
